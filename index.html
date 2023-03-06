@@ -5,10 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Gyakorlás</title>
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
-    <h1>JavaScript Gyakorlat</h1>
+
+    <div class="parent">
+        <input type="number" class="hozzaad__ertek ertek1" placeholder="érték1">
+        <select class="hozzaad__tipus">
+            <option value="osszead" selected>+</option>
+            <option value="kivon">-</option>
+        </select>
+        <input type="number" class="hozzaad__ertek ertek2" placeholder="érték2">
+        <div class="button"><span id="eredmeny">Szamol</span></div>
+    </div>
+
     <script src="app.js"></script>
 </body>
 </html>

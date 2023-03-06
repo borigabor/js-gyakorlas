@@ -169,3 +169,40 @@ console.log(addThree(2));
 console.log(addTo(3)(2));
 */
 
+
+
+// számokat visszafelé kiir 51 => 15
+
+/*
+const reverseInt = (n) => {
+    if (n < 0) {
+        return -1 * parseInt(n.toString().split('').reverse().join(''));
+    }
+    return parseInt(n.toString().split('').reverse().join(''));
+}
+
+console.log(reverseInt(51));
+*/
+
+
+
+const hozzaad__gomb = document.querySelector(".button");
+
+const eredmeny = document.querySelector("#eredmeny");
+
+let vegeredmeny = 0;
+
+hozzaad__gomb.addEventListener("click", () => {
+    let tipus = document.querySelector(".hozzaad__tipus").value;
+    let ertek1 = parseInt(document.querySelector(".ertek1").value);
+    let ertek2 = parseInt(document.querySelector(".ertek2").value);
+
+    if(tipus === "osszead") {
+        vegeredmeny = (ertek1 + ertek2);
+    } else if(tipus === "kivon") {
+        vegeredmeny = (ertek1 - ertek2);
+    }
+
+    eredmeny.textContent = vegeredmeny;
+ 
+})
