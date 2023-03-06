@@ -206,3 +206,111 @@ hozzaad__gomb.addEventListener("click", () => {
     eredmeny.textContent = vegeredmeny;
  
 })
+
+/*
+let shoesAvailable = new Promise((resolve, rejected) => {
+    let inStock = true;
+
+    if(inStock) {
+        resolve("Store has shoes in stock");
+    } else {
+        rejected("Store does not have shoes in stock");
+    }
+})
+
+let sufficientFunds = () => {
+    return new Promise((resolve, rejected) => {
+       // setTimeout(() => resolve("Yay! Enough money in the bank"), 1000)
+       setTimeout(() => rejected("Not enough money in the bank"), 1000)
+    })
+}
+
+let transaction = () => {
+    return new Promise((resolve, rejected) => {
+        setTimeout(() => {
+            resolve("Transaction went trough")
+        }, 1000)
+    })
+}
+
+shoesAvailable
+    .then((response) => {
+        console.log(response);
+        return sufficientFunds();
+    })
+    .then((response) => {
+        console.log(response);
+        return transaction();
+    })
+    .then((response) => console.log("Finished! " + response))
+    .catch((err) => console.log(err));
+    
+*/
+
+
+/*
+const azonostiokLekerdezese = new Promise((resolve, rejected) => {
+    setTimeout(() => {
+        resolve([1, 34, 46, 99, 120])
+        //rejected("Valami hiba történt")
+    }, 2000)
+})
+
+const receptLekerdez = (receptID) => {
+    return new Promise((resolve, rejected) => {
+        setTimeout((id) => {
+            const recept = {
+                cim: 'GulyásLeves',
+                kategoria: 'Levesek'
+            };
+            resolve(`${id}: ${recept.cim}`)
+        },1500, receptID)
+    })
+}
+
+const kategoriaLekerdez = (kategoria) => {
+    return new Promise((resolve, rejected) => {
+        setTimeout((kat) => {
+            const levesek = [
+                {cim: 'Tökeleves', kategoria: 'Levesek'},
+                {cim: 'Húsleves', kategoria: 'Levesek'}
+            ];
+            resolve(levesek)
+        }, 1500, kategoria)
+    })
+}*/
+
+/*
+azonostiokLekerdezese
+    .then((azonositok) => {
+        console.log(azonositok);
+        return receptLekerdez(azonositok[2]);
+    })
+    .then((recept) => {
+        console.log(recept);
+        return kategoriaLekerdez(recept.kategoria)
+    })
+    .then((kategoria) => {
+        console.log(kategoria);
+    })
+    .catch((hiba) => {
+        console.log(hiba);
+    })
+*/
+/*
+async function getReceptek() {
+    const azonositok = await azonostiokLekerdezese;
+    console.log(azonositok);
+
+    const receptek = await receptLekerdez(azonositok[2]);
+    console.log(receptek);
+
+    const kat = await kategoriaLekerdez(receptek.kategoria);
+    console.log(kat);
+
+    return receptek;
+}
+
+getReceptek().then(eredmeny => console.log(`${eredmeny} a legjobb leves`));
+    
+*/
